@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.UnConfStudentInfo">
+    <ContentPage.Content>
+        <ScrollView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Orientation="Vertical">
+            <StackLayout BackgroundColor="#DADADA" 
+                         VerticalOptions="Start">
+                <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                    <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"
+                            FontSize="Large"></Button>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="#e93578" IsVisible="False"
+                   FontSize="Small"></Label>
+                </StackLayout>
+
+                <StackLayout x:Name="layout">
+
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="معلومات الطالب" FontSize="Medium" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="الإسم: " FontAttributes="Bold" Grid.Column="1" Grid.Row="0"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="text" x:Name="student_name" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="0"></Label>
+
+                            <Label Text="العمر: " FontAttributes="Bold" Grid.Column="1" Grid.Row="1"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="text" x:Name="student_age" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="1"></Label>
+
+                            <Label Text="ولي الأمر: " FontAttributes="Bold" Grid.Column="1" Grid.Row="2"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="txt" x:Name="parent_name" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="2"></Label>
+
+                            <Label Text="البريد الإلكتروني: "  Grid.Column="1" Grid.Row="3"
+                           FontAttributes="Bold" HorizontalTextAlignment="End"></Label>
+                            <Label Text="txt" x:Name="parent_email" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="3"></Label>
+
+                            <Label Text="الهاتف: " FontAttributes="Bold" Grid.Column="1" Grid.Row="4"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="txt" x:Name="parent_number" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="4"></Label>
+
+                            <Label Text="المركز: " FontAttributes="Bold" Grid.Column="1" Grid.Row="5"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="txt" x:Name="center" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="5"></Label>
+
+                            <Label Text="اسم الأخصائي: " FontAttributes="Bold" Grid.Column="1" Grid.Row="6"
+                           HorizontalTextAlignment="End"></Label>
+                            <Label Text="txt" x:Name="specialist_name" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="6"></Label>
+
+                            <Label Text="البريد الإلكتروني: "  Grid.Column="1" Grid.Row="7"
+                           FontAttributes="Bold" HorizontalTextAlignment="End" ></Label>
+                            <Label Text="txt" x:Name="specialist_email" HorizontalTextAlignment="End" Grid.Column="0" Grid.Row="7"></Label>
+
+                        </StackLayout>
+                    </Grid>
+
+                    <Button Text="إلغاء التفعيل" BackgroundColor="Red" 
+                        TextColor="White"
+                        Clicked="Confirm_OnClickedAsync"
+                        x:Name="confirm"
+                         VerticalOptions="Center"
+                        HorizontalOptions="Center"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

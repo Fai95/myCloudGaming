@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.AdminRegister">
+    <ContentPage.Content>
+        <ScrollView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Orientation="Vertical">
+            <StackLayout BackgroundColor="#DADADA" 
+                         VerticalOptions="Start">
+                <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                    <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"
+                            FontSize="Large"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+                </StackLayout>
+                <StackLayout x:Name="layout">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="تسجيل" FontSize="Medium" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="Center">
+
+                        <Label Text="الاسم" x:Name="name_label" HorizontalTextAlignment="End"></Label>
+                        <Entry x:Name="first_name" TextChanged="Name_OnTextChanged"/>
+
+                        <Label Text="البريد الإلكتروني" HorizontalTextAlignment="End" x:Name="email_label"></Label>
+                        <Entry x:Name="email" TextChanged="Email_OnTextChanged" Keyboard="Email"/>
+
+                        <Label Text="كلمة المرور" HorizontalTextAlignment="End" x:Name="pass1_label"></Label>
+                        <Entry x:Name="pass1" IsPassword="True" TextChanged="Pass1_OnTextChanged"/>
+
+                        <Label Text="تأكيد كلمة المرور" HorizontalTextAlignment="End" x:Name="pass2_label"></Label>
+                        <Entry x:Name="pass2" IsPassword="True" TextChanged="Pass2_OnTextChanged"/>
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Button Text="تسجيل" TextColor="White" Clicked="Register_OnClickAsync" BackgroundColor="Green"></Button>
+                        </StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

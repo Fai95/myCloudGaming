@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.MainGamesList">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+
+            <Grid>
+                <StackLayout Orientation="Horizontal"  BackgroundColor="#CCCCCC"  >
+                    <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HomeTap"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="letsplay" Grid.Row="1" HorizontalOptions="Center"
+                  VerticalOptions="Center" Aspect="AspectFit" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LetsPlay"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="letslearn" Grid.Row="2" HorizontalOptions="Center"
+                  VerticalOptions="Center"  Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LetsLearn"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid >
+
+        </Grid >
+    </ContentPage.Content>
+</ContentPage>

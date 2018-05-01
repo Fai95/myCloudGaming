@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.XML_S.Login">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                    <Button Text="رجوع" FontSize="Large"
+                        TextColor="White" BackgroundColor="#e93578"
+                        x:Name="return" Clicked="Return_OnClicked">
+                    </Button>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+                </StackLayout>
+
+                <StackLayout x:Name="layout" VerticalOptions="Center">
+
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="تسجيل الدخول"  FontAttributes="Bold" FontSize="Large"></Label>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="Center">
+
+                        <Label Text="البريد الإلكتروني" 
+                   HorizontalTextAlignment="End" FontSize="Medium"
+                       x:Name="email_label"></Label>
+                        <Entry x:Name="email" TextChanged="Uname_OnTextChanged" Keyboard="Email"/>
+
+                        <Label Text="كلمة المرور" 
+                   HorizontalTextAlignment="End" FontSize="Medium"
+                       x:Name="password_label"></Label>
+                        <Entry x:Name="pass" IsPassword="True" TextChanged="Password_OnTextChanged"/>
+
+                        <Label  Text="نسيت كلمة المرور" 
+                    x:Name="forgetpass_label" HorizontalOptions="Center" TextColor="Blue" FontSize="Medium">
+                        </Label>
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Button Text="دخول" TextColor="White"  BackgroundColor="Green" FontSize="Large"
+                            x:Name="loginBtn" Clicked="LoginBtn_ClickedAsync"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

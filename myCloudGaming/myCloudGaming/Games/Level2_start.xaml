@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.Level2_start">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#DADADA">
+            <StackLayout Orientation="Horizontal"  BackgroundColor="#CCCCCC" >
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Home"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/right-arrow.png" HorizontalOptions="EndAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Menu"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Label Text="استمع للأصوات التالية ثم اختر الأجابة المناسبة لكل سؤال" FontSize="Large" TextColor="Black" 
+               VerticalOptions="Center" HorizontalOptions="Center"  x:Name="Question_label"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/bluesapeaker.png"
+                    HorizontalOptions="Center"
+                  VerticalOptions="Start" Aspect="AspectFit" Grid.Row="0" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Play"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/startblue.png"
+                    HorizontalOptions="Center"
+                  VerticalOptions="Center" Grid.Row="1"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Start"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

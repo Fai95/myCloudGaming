@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.GoodJob">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#DADADA">
+            <StackLayout Orientation="Horizontal" BackgroundColor="#CCCCCC">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand"  />
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/right-arrow.png" HorizontalOptions="EndAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Menu"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="GoodJobPic" Grid.Column="1" Grid.Row="0"/>
+                    <Button Text="المرحلة التالية" Clicked="next_level" HorizontalOptions="Center" FontSize="Large"
+                        VerticalOptions="Center" BackgroundColor="#91DFD6" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

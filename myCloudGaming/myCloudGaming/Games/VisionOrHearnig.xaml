@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.VisionOrHearnig">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#CCCCCC">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Home"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label x:Name="gameName" FontSize="Large" TextColor="Black" 
+               VerticalOptions="Center" HorizontalOptions="Center" />
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Grid >
+                        <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Vision.png" Grid.Row ="0" Grid.Column=" 0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Visual" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Hearing.png" Grid.Row ="0"  Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Hearing" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

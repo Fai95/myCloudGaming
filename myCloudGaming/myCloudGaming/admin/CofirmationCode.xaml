@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.CofirmationCode">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#DADADA">
+            <StackLayout VerticalOptions="Center">
+                <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                    <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"
+                            FontSize="Large"></Button>
+                    <Label  Text= "تواصل معنا"
+                    x:Name="Contact_us_Label" HorizontalOptions="Center" TextColor="Blue" FontSize="Small">
+                    </Label>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+                </StackLayout>
+                <StackLayout  x:Name="layout">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+
+
+                        <Label Text="المدينة" 
+                       HorizontalTextAlignment="End" 
+                       FontSize="Medium"
+                       x:Name="city_label"></Label>
+                        <Picker x:Name="CityPicker" SelectedIndexChanged="CityPicker_OnSelectedChanged">
+                        </Picker>
+
+                        <Label Text="المركز" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="center_label"
+                       FontSize="Medium"></Label>
+                        <Picker x:Name="CenterPicker" SelectedIndexChanged="CenterPicker_OnSelectedChanged">
+                        </Picker>
+                        <Label Text="ادخل رمز المركز للتأكيد" 
+                    HorizontalOptions="End"
+                   FontSize="Medium"></Label>
+                        <Entry x:Name="Acode" TextChanged="Code_OnTextChanged"></Entry>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Button Text="دخول" TextColor="White"  BackgroundColor="Green" 
+                            x:Name="codeBtn"
+                            Clicked="CodeEnry_ClickedAsync"></Button>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

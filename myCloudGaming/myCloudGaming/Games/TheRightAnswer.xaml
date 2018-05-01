@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.TheRightAnswer">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#DADADA">
+            <Label Text="الأجابة الصحيحة هي" FontSize="Large" TextColor="Black" 
+               VerticalOptions="Center" HorizontalOptions="Center" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="RightAnswer"  Grid.Row="0" Grid.Column="0"  HorizontalOptions="Center"
+                  VerticalOptions="Center" >
+                </Image>
+
+                <Button Text="المرحلة التالية" Clicked="next_level" Grid.Row="1" Grid.Column="0" 
+                       HorizontalOptions="Center" FontSize="Large"
+                        VerticalOptions="Center" BackgroundColor="#91DFD6"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

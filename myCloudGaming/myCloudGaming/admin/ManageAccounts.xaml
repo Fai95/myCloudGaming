@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.ManageAccounts">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+            <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                <Button Text="خروج" FontSize="Large"  BackgroundColor="#e93578" TextColor="White"
+                        x:Name="Logout" Clicked="Logout_OnClicked"></Button>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+            </StackLayout>
+            <Grid   VerticalOptions="FillAndExpand" HorizontalOptions="Center" Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="الأخصائيين"    HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"
+                            TextColor="White"  FontSize="Large"
+                            Clicked="SpeciaLists_OnClicked" 
+                            BackgroundColor="Green"></Button>
+
+                <Button Text="الطلاب " Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="CenterAndExpand"
+                            TextColor="White" FontSize="Large"
+                            Clicked="Parents_OnClicked" 
+                            BackgroundColor="#006ce5"></Button>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

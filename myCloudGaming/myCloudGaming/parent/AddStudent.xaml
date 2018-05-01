@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.parent.AddStudent">
+    <ContentPage.Content>
+        <ScrollView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Orientation="Vertical"  BackgroundColor="#DADADA">
+            <StackLayout BackgroundColor="#DADADA">
+                <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                    <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"
+                        FontSize="Large"></Button>
+                </StackLayout>
+
+                <StackLayout BackgroundColor="#DADADA">
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="#e93578" IsVisible="False"
+                   FontSize="Small"></Label>
+                </StackLayout>
+
+                <StackLayout x:Name="layout" BackgroundColor="#DADADA">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="إضافة طالب" FontSize="Medium" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout BackgroundColor="White" VerticalOptions="Center">
+
+                        <Label Text="الاسم الأول" 
+                       x:Name="first_label" 
+                       HorizontalTextAlignment="End"
+                       FontSize="Medium"></Label>
+                        <Entry x:Name="first_name" 
+                       TextChanged="First_name_OnTextChanged"/>
+
+                        <Label Text="الاسم الأخير" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="last_label"
+                       FontSize="Medium"></Label>
+                        <Entry x:Name="last_name" 
+                       TextChanged="Last_name_OnTextChanged"/>
+
+                        <Label Text="الجنس" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="gender_label"
+                       FontSize="Medium"></Label>
+                        <Picker x:Name="GenderPicker" SelectedIndexChanged="GenderPicker_OnSelectedChanged">
+                        </Picker>
+
+                        <Label Text="تاريخ الميلاد" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="dob_label"
+                       FontSize="Medium"></Label>
+                        <DatePicker  x:Name= "DoBPicker" 
+                             DateSelected="DoBPicker_DateSelected">
+                            <DatePicker.Format>dd/mm/yyyy</DatePicker.Format>
+                            <DatePicker.MaximumDate x:string ="31/12/2020">
+                            </DatePicker.MaximumDate>
+                            <DatePicker.MinimumDate x:string ="01/01/2010">
+                            </DatePicker.MinimumDate>
+                        </DatePicker>
+
+                        <Label Text="المدينة" 
+                       HorizontalTextAlignment="End" 
+                       FontSize="Medium"
+                       x:Name="city_label"></Label>
+                        <Picker x:Name="CityPicker" SelectedIndexChanged="CityPicker_OnSelectedChanged">
+                        </Picker>
+
+                        <Label Text="المركز" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="center_label"
+                       FontSize="Medium"></Label>
+                        <Picker x:Name="CenterPicker" SelectedIndexChanged="CenterPicker_OnSelectedChanged">
+                        </Picker>
+
+                        <Label Text="الأخصائي" 
+                       HorizontalTextAlignment="End" 
+                       x:Name="specialist_label"
+                       FontSize="Medium"></Label>
+                        <Picker x:Name="SpecialistPicker" SelectedIndexChanged="SpecialistPicker_OnSelectedChanged">
+                        </Picker>
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Button Text="إضافة" 
+                            TextColor="White"
+                            Clicked="AddStudent_OnClickAsync" 
+                            BackgroundColor="Green"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.GameList">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#DADADA">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#CCCCCC"  >
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="HomeTap"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Grid BackgroundColor="#DADADA">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="الألعاب النمائية" FontSize="Large" TextColor="Black" 
+               VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0"/>
+                    <Grid   VerticalOptions="FillAndExpand" HorizontalOptions="Center" Grid.Row="1" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Image x:Name="Attention" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"
+                  VerticalOptions="Center" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev5"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Memory" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"
+                  VerticalOptions="Center"  >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev1_2"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Recognize" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center"
+                  VerticalOptions="Center"  >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev3_4"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Closing" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"
+                  VerticalOptions="Center" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev8_9"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Recognetion" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev6_7"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Direction" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev10"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="Touch" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Lev11"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </Grid>
+            </Grid >
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

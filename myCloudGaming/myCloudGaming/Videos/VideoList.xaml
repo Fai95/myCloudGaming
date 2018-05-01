@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Videos.VideoList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="#DADADA">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                    <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HomeTap"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="Black" IsVisible="False"
+                   FontSize="Small"></Label>
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="layout" >
+
+
+                        <Label Text=" اختر الحركة" TextColor="Black"   FontSize="Large" 
+                   FontAttributes="Bold"
+               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                        <Grid   VerticalOptions="FillAndExpand" HorizontalOptions="Center" Grid.Row="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Image Grid.Row="0" Grid.Column="0"
+                               x:Name="Fat_ha"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Fat_haTap"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Grid.Row="0" Grid.Column="1"
+                               x:Name="Kasra"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="KasraTap"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Grid.Row="0" Grid.Column="2"
+                               x:Name="Dammah"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="DammahTap"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

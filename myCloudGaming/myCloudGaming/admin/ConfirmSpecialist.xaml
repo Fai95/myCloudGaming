@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.ConfirmSpecialist">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <ScrollView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Orientation="Vertical">
+                <StackLayout BackgroundColor="White" 
+                         VerticalOptions="Start">
+                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                        <Button Text="رجوع" FontSize="Large" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"></Button>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+                    </StackLayout>
+                    <StackLayout x:Name="layout">
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                            <Label Text="معلومات الأخصائي" FontSize="Medium" FontAttributes="Bold"></Label>
+                        </StackLayout>
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Orientation="Horizontal"  Grid.Column="1" Grid.Row="0">
+                                    <Label Text="الإسم: " FontAttributes="Bold"
+                           HorizontalTextAlignment="End">
+                                    </Label>
+                                    <Label Text="" x:Name="specialist_name"  Grid.Column="0" Grid.Row="0"
+                               HorizontalTextAlignment="End"></Label>
+                                </StackLayout>
+                                <Label Text="البريد الإلكتروني: "  Grid.Column="1" Grid.Row="1"
+                           FontAttributes="Bold" HorizontalTextAlignment="End"></Label>
+                                <Label Text="" x:Name="specialist_email" Grid.Column="0" Grid.Row="1"
+                                   HorizontalTextAlignment="End"></Label>
+
+                                <Label Text="الهاتف: " FontAttributes="Bold"  Grid.Column="1" Grid.Row="2"
+                           HorizontalTextAlignment="End"></Label>
+                                <Label Text="" x:Name="specialist_number"  Grid.Column="0" Grid.Row="2"
+                                   HorizontalTextAlignment="End"></Label>
+
+                                <Label Text="المركز: " FontAttributes="Bold" Grid.Column="1" Grid.Row="3"
+                           HorizontalTextAlignment="End"></Label>
+                                <Label Text="" x:Name="center"  Grid.Column="0" Grid.Row="4"
+                                   HorizontalTextAlignment="End"></Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <Button Text="تفعيل" BackgroundColor="Green" 
+                        TextColor="White"
+                        Clicked="UnConfirm_OnClickedAsync"
+                        x:Name="confirm"
+                         VerticalOptions="Center"
+                        HorizontalOptions="Center"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

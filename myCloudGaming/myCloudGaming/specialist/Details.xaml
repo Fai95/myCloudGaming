@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.specialist.Details">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#DADADA" 
+                         VerticalOptions="Start">
+            <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="return" Clicked="Return_OnClicked"
+                            FontSize="Large"></Button>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+            </StackLayout>
+
+            <StackLayout x:Name="layout">
+
+                <Grid Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="stateImg" Grid.Column="0" Grid.Row="0" />
+
+                    <Label Text="اسم الطالب" x:Name="student_name_label"  Grid.Column="1" Grid.Row="1"
+                               HorizontalTextAlignment="End" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                    <Label  x:Name="student_name"  Grid.Column="0" Grid.Row="1"
+                               HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                    <Label Text="اسم اللعبة" x:Name="level_label"  Grid.Column="1" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center"
+                               HorizontalTextAlignment="End" FontAttributes="Bold"></Label>
+
+                    <Label  x:Name="level_name"  Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center"
+                               HorizontalTextAlignment="End"></Label>
+
+                    <Label Text="الدرجة" x:Name="score_label"  Grid.Column="1" Grid.Row="3"
+                               HorizontalTextAlignment="End" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                    <Label  x:Name="score"  Grid.Column="0" Grid.Row="3"
+                               HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                    <Label Text="الوقت" x:Name="time_label"  Grid.Column="1" Grid.Row="4"
+                               HorizontalTextAlignment="End" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                    <Label  x:Name="time"  Grid.Column="0" Grid.Row="4"
+                               HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                </Grid>
+                <Button Text="تواصل مع الاب" Clicked="Contact_OnClick" BackgroundColor="Green" TextColor="White" FontSize="Large" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

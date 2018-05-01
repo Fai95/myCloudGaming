@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.XML_S.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="#DADADA">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                    <Button Text="رجوع" FontSize="Large"
+                        TextColor="White" BackgroundColor="#e93578"
+                        x:Name="return" Clicked="Return_OnClicked">
+                    </Button>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                    <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="LightGray" IsVisible="False"
+                   FontSize="Small"></Label>
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="layout" >
+
+                        <Grid   VerticalOptions="FillAndExpand" HorizontalOptions="Center" Grid.Row="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+
+                            <Button BackgroundColor="#006ce5" Text="دخول" VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                    TextColor="White" FontSize="Large" Grid.Row="0" Grid.Column="2"
+                    Clicked="LoginBtn_OnClicked">
+                            </Button>
+
+
+                            <Button BackgroundColor="Green" Text="تسجيل"  Grid.Row="0" Grid.Column="1"
+                    TextColor="White" FontSize="Large" 
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                    Clicked="RegstBtn_OnClicked">
+                            </Button>
+
+
+                            <Button Text="من نحن" FontSize="Large" Grid.Row="0" Grid.Column="0"
+                                HorizontalOptions="Center" VerticalOptions="Center"
+                            Clicked = "InfoBtn_OnClick">
+                            </Button>
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

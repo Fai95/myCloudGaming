@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.parent.ParentPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#DADADA">
+            <ScrollView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Orientation="Vertical">
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/visual+/Background2.png" Aspect="AspectFit" />
+
+                <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                        <Button Text="خروج" FontSize="Large" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="Logout" Clicked="Logout_OnClicked"></Button>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="#e93578" IsVisible="False"
+                   FontSize="Small"></Label>
+                    </StackLayout>
+                    <Grid>
+                        <StackLayout x:Name="layout">
+
+                            <StackLayout VerticalOptions="Center">
+
+                                <Label x:Name="parentName_label" HorizontalTextAlignment="End"></Label>
+                                <Label Text="اختر الطالب"    x:Name="student_Label"
+                           HorizontalOptions="End"
+                           FontSize="Medium"></Label>
+                                <Picker x:Name="StudentPicker" SelectedIndexChanged="StudentPicker_OnSelectedChanged"/>
+                            </StackLayout>
+
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                                <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                                    <Button Text="اضافة" FontSize="Large" BackgroundColor="#006ce5" 
+                                TextColor="White"
+                                Clicked="Add_OnClicked"></Button>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="End" HorizontalOptions="End">
+                                    <Button Text="تعديل" FontSize="Large"
+                                TextColor="White"
+                                BackgroundColor="#006ce5"
+                                Clicked="Update_OnClick"></Button>
+                                </StackLayout>
+
+                                <Button Text="حذف" FontSize="Large" BackgroundColor="#ff0000" 
+                            TextColor="White"
+                            Clicked="Delete_OnClickedAsync"></Button>
+
+                                <Button Text="موافق" FontSize="Large"
+                            Clicked="Choose_OnClick"
+                            TextColor="White"
+                            BackgroundColor="#72bb53"></Button>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

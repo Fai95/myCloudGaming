@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.Games.Level1_start">
+    <ContentPage.Content>
+        <StackLayout x:Name="clickableLayout">
+            <StackLayout Orientation="Horizontal"  BackgroundColor="#CCCCCC" >
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/home+(1).png" HorizontalOptions="StartAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Home"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="https://s3.amazonaws.com/cloudgamingmulitmediabucket/right-arrow.png" HorizontalOptions="EndAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Menu"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Label Text="احفظ الصور اللتي أمامك بالترتيب ثم أجب على الاسئلة التالية" FontSize="Medium" TextColor="Black" 
+               VerticalOptions="Center" HorizontalOptions="Center" x:Name="Question_label"/>
+            <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="pic1" Grid.Row="0" HorizontalOptions="Center"
+                  VerticalOptions="Center"/>
+                <Image x:Name="pic2" Grid.Row="1"  HorizontalOptions="Center"
+                  VerticalOptions="Center" />
+                <Image x:Name="pic3" Grid.Row="2"  HorizontalOptions="Center"
+                  VerticalOptions="Center"/>
+                <Image x:Name="pic4" Grid.Row="3"  HorizontalOptions="Center"
+                  VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

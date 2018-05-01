@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCloudGaming.admin.SpeciaLists">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#DADADA">
+            <StackLayout HorizontalOptions="Start" VerticalOptions="Start">
+                <Button Text="رجوع" BackgroundColor="#e93578" TextColor="White"
+                        x:Name="Return" Clicked="Return_OnClicked"
+                            FontSize="Large"></Button>
+                <Label Text="تعليمات"  TextColor="Blue"
+                        x:Name="instructions"  ></Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Connectivity" HorizontalTextAlignment="Center" 
+                   TextColor="#e93578" IsVisible="False"
+                   FontSize="Small"></Label>
+            </StackLayout>
+
+            <StackLayout x:Name="layout" VerticalOptions="Center">
+
+                <StackLayout VerticalOptions="Center" HorizontalOptions="End">
+                    <Label Text="الأخصائيين" FontSize="Medium" FontAttributes="Bold"></Label>
+                </StackLayout>
+
+                <Label Text="تفعيل الحساب" x:Name="confirm_label"
+                    HorizontalOptions="End"
+                   FontSize="Medium"></Label>
+
+                <Picker x:Name="Confirmed" 
+                        SelectedIndexChanged="Confirmed_OnSelectedIndexChanged"></Picker>
+
+                <Button Text="عرض المعلومات" BackgroundColor="Green" 
+                        TextColor="White"
+                        Clicked="Confirm_OnClicked"
+                        x:Name="confirm"
+                         VerticalOptions="Center"
+                        HorizontalOptions="Center"></Button>
+                
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="إلغاء تفعيل الحساب"
+                     HorizontalOptions="End" x:Name="unConfirm_label"
+                   FontSize="Medium"></Label>
+                    <Picker x:Name="Unconfirmed"
+                        SelectedIndexChanged="Unconfirmed_OnSelectedIndexChanged"></Picker>
+                    <Button Text="عرض المعلومات" BackgroundColor="Red" 
+                        TextColor="White"
+                        Clicked="Unconfirm_OnClicked"
+                        x:Name="unconfirm"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
